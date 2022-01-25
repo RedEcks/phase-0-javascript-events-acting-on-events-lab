@@ -15,16 +15,16 @@ function moveDodgerLeft() {
   });
 
   function moveDodgerRight() {
-    const rightNumbers = dodger.style.right.replace("px", "");
-    const right = parseInt(rightNumbers, 10);
+    const leftNumbers = dodger.style.left.replace("px", "");
+    const left = parseInt(leftNumbers, 10);
   
-    if (left < 0) {
-      dodger.style.right = `${left + 1}px`;
+    if (left > 0) {
+      dodger.style.left = `${left + 1}px`;
     }
   }
 
   document.addEventListener("keydown", function (e) {
-    if (e.key === "ArrowRight") {
-      moveDodgerRight();
+    if (e.key === "ArrowLeft") {
+      moveDodgerLeft();
     }
   });
